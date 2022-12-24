@@ -59,11 +59,17 @@ const getAll = () =>{
       $table.querySelector('tbody').appendChild($fragment)
     },
   
+    error: (err)=>{
+      console.log("Transfer failed")
+      alert(`Transfer failed`)
+    },
     
-
     data:null 
+
   })
 }
+
+document.querySelector("#iden").value=""
 document.addEventListener("DOMContentLoaded", getAll )
 
 
@@ -106,8 +112,10 @@ document.addEventListener("submit", e =>{
           code: e.target.code.value
           },
     
-        succes: (res)=>{location.reload()},
-    
+          success: (res) => {
+            document.getElementById("iden").value = ""
+            location.reload()
+          },
         error: (err)=>{
             console.log("Transfer failed")
             alert(`Transfer failed`)
@@ -122,6 +130,7 @@ document.addEventListener("submit", e =>{
 
 document.addEventListener("click", e =>{
   if(e.target.matches(".btn_edit")){
+    e.preventDefault();
     console.log(e.target)
     $title.textContent = 'EDIT ARTICLE'
     $form.article.value = e.target.dataset.article
@@ -133,7 +142,26 @@ document.addEventListener("click", e =>{
 // event button edit
 document.addEventListener("click", e =>{
   if(e.target.matches(".btn_del")){
+    e.preventDefault()
     console.log(e.target)
     
+    isDelete = confirm(`Estás seguro de eliminar el id ${e.target.dataset.id}?`)
+       
+    if (isDelete){
+      ajax({
+        method: "DELETE",
+          
+        url:`http://localhost:3000/articles/${e.target.dataset.id}`,
+          
+        success: (res) => location.reload(),
+           
+        error: (err)=>{
+            console.log("Transfer failed")
+            alert(`Transfer failed`)
+        } 
+                  
+      }) 
+    }
   }
 })
+
