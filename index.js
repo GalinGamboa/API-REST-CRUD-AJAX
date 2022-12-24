@@ -145,7 +145,7 @@ document.addEventListener("click", e =>{
     e.preventDefault()
     console.log(e.target)
     
-    isDelete = confirm(`Estás seguro de eliminar el id ${e.target.dataset.id}?`)
+    isDelete = confirm(`Êtes-vous sûr de supprimer l'identifiant ${e.target.dataset.id}?`)
        
     if (isDelete){
       ajax({
