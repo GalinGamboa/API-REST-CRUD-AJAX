@@ -37,11 +37,11 @@ Ceci est une petite application pour apprendre à faire une API REST avec Ajax
 ## ***Screenshots***
 
 
-![](images/img00.png)
-![](images/img01.png)
-![](images/img02.png)
-![](images/img03.png)
-![](images/img04.png)
+![](./images/img00.png)
+![](./images/img01.png)
+![](./images/img02.png)
+![](./images/img03.png)
+![](./images/img04.png)
 
 
 ## ***Notes:***
