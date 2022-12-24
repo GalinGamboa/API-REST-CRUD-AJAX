@@ -59,14 +59,81 @@ const getAll = () =>{
       $table.querySelector('tbody').appendChild($fragment)
     },
   
-    error: (err)=>{
-      console.log("Transfer failed")
-      alert(`Transfer failed`)
-     
-    } ,
+    
 
     data:null 
   })
 }
 document.addEventListener("DOMContentLoaded", getAll )
 
+
+// POST et PUT  ---------------------------------------------------------------------
+document.addEventListener("submit", e =>{
+  if (e.target === $form){
+    e.preventDefault();
+    if(!e.target.id.value){
+
+      // POST---------------------------------------------------------
+      ajax({
+
+        method: "POST",
+    
+        url: "http://localhost:3000/articles",
+    
+        data: {
+          article: e.target.article.value,
+          code: e.target.code.value
+          },
+    
+        succes: (res)=>{location.reload()},
+    
+         error: (err)=>{
+            console.log("Transfer failed")
+            alert(`Transfer failed`)
+          } 
+      })
+    }
+    else {
+    // PUT---------------------------------------------------------
+      ajax({
+
+        method: "PUT",
+    
+        url: `http://localhost:3000/articles/${e.target.id.value}`,
+    
+        data: {
+          article: e.target.article.value,
+          code: e.target.code.value
+          },
+    
+        succes: (res)=>{location.reload()},
+    
+        error: (err)=>{
+            console.log("Transfer failed")
+            alert(`Transfer failed`)
+          } 
+      })
+    }
+  }  
+})
+
+
+// event button edit
+
+document.addEventListener("click", e =>{
+  if(e.target.matches(".btn_edit")){
+    console.log(e.target)
+    $title.textContent = 'EDIT ARTICLE'
+    $form.article.value = e.target.dataset.article
+    $form.code.value = e.target.dataset.code
+    $form.id.value = e.target.dataset.id
+  }
+})
+
+// event button edit
+document.addEventListener("click", e =>{
+  if(e.target.matches(".btn_del")){
+    console.log(e.target)
+    
+  }
+})
