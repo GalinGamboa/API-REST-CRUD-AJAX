@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> API REST CRUD AJAX</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <h1>API REST CRUD AJAX </h1>
+      <section>
+        <h2 class="crud-title">ADD ARTICLE:</h2>
+        <form  class="crud-form" >
+          <label for="input_article">Article:</label>
+          <input id="input_article" type="text" name="article" placeholder="article" required>
+            <br>
+            <br>
+          <label for="input_code">Code:</label> 
+          <input id="input_code" type="text" name="code" placeholder="code" required>
+            <br>
+            <br>
+          <input class ="btn-send" type="submit" value="Send">
+          <input type="hidden" name="id" id ="iden">
+        </form>
+      </section>
+      
+      <div class="container">
+        <article>
+          <h1>TABLE</h1>
+          <table class="crud-table">
+            <thead>
+              <tr>
+                <th>Article</th>
+                <th>Code</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </article>
+        
+        <template id="crud-template">
+          <tr>
+            <td class="article hov_bg"></td>
+            <td class="code hov_bg"></td>
+            <td>
+              <button class="btn btn_edit">EDIT</button>
+              <button class="btn btn_del">DELETE</button>
+            </td>
+          </tr>
+        </template>
+      </div>
+        
+      
+
+    <script src="index.js"></script>
+  </body>
+</html>

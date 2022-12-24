@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(212, 209, 209);
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+}
+
+.crud-title {
+  padding: 20px 0 20px 60px;
+}
+
+label {
+  padding: 0 15px 0 30px;
+  font-weight: bold;
+}
+
+#input_code {
+  margin-left: 10px;
+}
+
+.btn-send {
+  width: 100px;
+  height:25px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 0 100px;
+  background-color: rgb(38, 135, 180);
+  border: solid 2px rgb(104, 102, 102);
+  border-radius: 3px;
+  color : white
+}
+
+.btn-send:hover {
+  background-color: rgb(64, 38, 180);
+  cursor: pointer;
+}
+
+.crud-table {
+  margin:  auto;
+  width: 89%;
+}
+
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+
+th,td {
+  padding: 4px;
+  width: 33%;
+}
+
+td {
+  text-align: center;
+}
+
+table thead th{
+  background-color: rgb(1, 77, 51);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table tbody tr{
+  border : 1px solid black; 
+  background-color: rgba(179, 179, 179, 0.993);
+}
+
+.hov_bg:hover {
+  background-color: rgba(83, 83, 83, 0.993);
+  color: white;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 5px;
+  width: 60px;
+  cursor:pointer
+}
+
+.btn_edit{
+  background-color: rgb(17, 17, 180);
+  color:white
+}
+
+.btn_edit:hover{
+  background-color: rgb(15, 15, 80);
+  color:white
+}
+
+.btn_del{
+  background-color: rgb(202, 22, 22);
+  color:white
+}
+
+.btn_del:hover{
+  background-color: rgb(97, 2, 2);
+  color:white
+}

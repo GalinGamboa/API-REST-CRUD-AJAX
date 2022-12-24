@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "article": "capteur XZ23",
+      "code": "TP251"
+    },
+    {
+      "id": 2,
+      "article": "moteur A2V",
+      "code": "TP858"
+    }
+  ]
+}
