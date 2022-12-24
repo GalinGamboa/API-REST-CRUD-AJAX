@@ -21,11 +21,11 @@ Ceci est une petite application pour apprendre à faire une API REST avec Ajax
 ## ***Directory***
 		/assets/
 			data.json
-    /images/
+		/images/
 			img00.png
 		/index.html
 		/index.js
-    /package.json
+		/package.json
 		/style.css
 		/README.md
 
@@ -33,7 +33,7 @@ Ceci est une petite application pour apprendre à faire une API REST avec Ajax
 ## ***Screenshots***
 
 
-![](img00.png)
+![](images/img00.png)
 
 
 
