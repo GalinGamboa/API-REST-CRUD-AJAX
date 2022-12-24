@@ -23,6 +23,10 @@ Ceci est une petite application pour apprendre à faire une API REST avec Ajax
 			data.json
 		/images/
 			img00.png
+			img01.png
+			img02.png
+			img03.png
+			img04.png
 		/index.html
 		/index.js
 		/package.json
